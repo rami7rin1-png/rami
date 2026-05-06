@@ -9,30 +9,31 @@ export type Work = {
 export const works: Work[] = [
   {
     id: 1,
-    title: "スケジュール管理サポート",
+    title: "思考整理・タスク整理サポート",
     description:
-      "経営者様の月間スケジュールを一元管理。Google カレンダーを活用し、会議設定・リマインド・調整業務を担当しました。",
-    tools: ["Google カレンダー", "Slack", "Notion"],
+      "「やることが多すぎて何から手をつければ？」というお悩みに対し、頭の中を一緒に整理。優先順位の整理からタスクリスト化まで、あなたのペースに合わせてサポートします。",
+    tools: ["Google Keep", "Google スプレッドシート", "Google ドキュメント"],
   },
   {
     id: 2,
-    title: "メール対応・文書作成",
+    title: "Web チラシ制作（Canva）",
     description:
-      "取引先へのメール文案作成・送受信管理を代行。月間 200 通以上のメール対応を行い、返信率・対応速度を改善しました。",
-    tools: ["Gmail", "Google Docs", "ChatGPT"],
+      "Canva を活用して制作した Web チラシです。イメージを伝えていただければ、デザインから仕上げまでお任せください。プレゼン資料・SNS 用バナーなども対応しています。",
+    tools: ["Canva"],
+    url: "https://canva.link/qi6vlbopnxk51bc",
   },
   {
     id: 3,
-    title: "資料作成・データ整理",
+    title: "スケジュール管理・メール対応",
     description:
-      "会議用プレゼン資料・月次レポートの作成。スプレッドシートでのデータ集計・グラフ化もお任せいただきました。",
-    tools: ["Google Slides", "Google Sheets", "Canva"],
+      "Google カレンダーを使ったスケジュール一元管理や、メール文案作成・送受信の代行。連絡調整もまとめてお任せいただけます。",
+    tools: ["Google カレンダー", "Gmail", "Google Docs"],
   },
   {
     id: 4,
-    title: "SNS 運用サポート",
+    title: "AI ツール活用サポート",
     description:
-      "Instagram・X（Twitter）の投稿文案作成と定期投稿。ハッシュタグ調査・エンゲージメント分析も対応しました。",
-    tools: ["Canva", "Buffer", "Instagram", "X"],
+      "ChatGPT などの AI ツールの使い方をわかりやすくサポート。「AI を使いたいけど難しそう」という方に、実務で使える活用方法をご提案します。",
+    tools: ["ChatGPT", "Gemini", "NotebookLM", "Claude", "Suno", "Canva AI"],
   },
 ];

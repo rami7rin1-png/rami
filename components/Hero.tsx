@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="max-w-2xl w-full">
         {/* 小見出し */}
         <p className="text-sm tracking-widest text-slate-400 uppercase mb-4">
-          Online Secretary
+          伴歩型オンライン秘書
         </p>
 
         {/* 名前 */}
@@ -14,9 +14,9 @@ export default function Hero() {
 
         {/* キャッチコピー */}
         <p className="text-lg sm:text-xl text-slate-500 mb-10 leading-relaxed">
-          あなたの「忙しい」を、まるっとサポート。
+          頭の中の「ごちゃごちゃ」を、一緒に整理します。
           <br />
-          オンライン秘書として、時間と心のゆとりをお届けします。
+          あなたのペースに寄り添いながら、やりたいことを前に進めるお手伝いをします。
         </p>
 
         {/* CTA ボタン */}

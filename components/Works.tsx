@@ -21,18 +21,7 @@ export default function Works() {
             >
               {/* タイトル */}
               <h3 className="text-lg font-medium text-slate-800 mb-3">
-                {work.url ? (
-                  <a
-                    href={work.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-slate-500 transition-colors"
-                  >
-                    {work.title} ↗
-                  </a>
-                ) : (
-                  work.title
-                )}
+                {work.title}
               </h3>
 
               {/* 説明 */}
@@ -41,7 +30,7 @@ export default function Works() {
               </p>
 
               {/* 使用ツール */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {work.tools.map((tool) => (
                   <span
                     key={tool}
@@ -51,6 +40,18 @@ export default function Works() {
                   </span>
                 ))}
               </div>
+
+              {/* 制作物リンク */}
+              {work.url && (
+                <a
+                  href={work.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-5 py-2 border border-slate-300 text-slate-600 text-xs tracking-wide hover:bg-slate-50 hover:border-slate-500 transition-colors duration-200"
+                >
+                  実際の制作物を見る ↗
+                </a>
+              )}
             </div>
           ))}
         </div>

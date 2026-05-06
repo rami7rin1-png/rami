@@ -1,5 +1,5 @@
 export default function Footer() {
-  const email = "your-email@example.com";
+  const email = "rami1rin7@gmail.com";
 
   return (
     <footer id="contact" className="py-24 bg-gray-50 px-6">
@@ -28,7 +28,7 @@ export default function Footer() {
 
         {/* コピーライト */}
         <p className="mt-16 text-xs text-slate-300">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+          © {new Date().getFullYear()} Ai Arakawa. All rights reserved.
         </p>
       </div>
     </footer>
