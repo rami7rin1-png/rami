@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* 固定ヘッダー（h-14 = 3.5rem）ぶんアンカー位置をずらす */
+  scroll-padding-top: 3.5rem;
 }
 
 body {

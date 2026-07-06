@@ -1,8 +1,8 @@
 export default function Footer() {
-  const email = "rami1rin7@gmail.com";
+  const email = "rami7rin1@gmail.com";
 
   return (
-    <footer id="contact" className="py-24 bg-gray-50 px-6">
+    <footer id="contact" className="py-24 bg-white px-6">
       <div className="max-w-2xl mx-auto">
         {/* セクションタイトル */}
         <p className="text-xs tracking-widest text-slate-400 uppercase mb-2">

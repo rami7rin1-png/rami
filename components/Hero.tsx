@@ -8,9 +8,10 @@ export default function Hero() {
         </p>
 
         {/* 名前 */}
-        <h1 className="text-5xl sm:text-6xl font-light text-slate-800 mb-6 leading-tight">
-          Ai　Arakawa/荒川　愛
+        <h1 className="text-5xl sm:text-6xl font-light text-slate-800 mb-3 leading-tight">
+          荒川 愛
         </h1>
+        <p className="text-sm tracking-widest text-slate-400 mb-6">Ai Arakawa</p>
 
         {/* キャッチコピー */}
         <p className="text-lg sm:text-xl text-slate-500 mb-10 leading-relaxed">
