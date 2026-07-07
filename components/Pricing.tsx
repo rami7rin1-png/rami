@@ -1,60 +1,37 @@
 const plans = [
   {
-    id: "spot",
-    label: "スポット",
-    name: "単発サポート",
-    price: "3,000",
-    unit: "円〜 / 1時間",
-    description: "「ちょっとだけ手伝ってほしい」に対応。資料作成・調査・相談などを1時間単位でご依頼いただけます。",
-    features: [
-      "思考・タスク整理",
-      "資料・スライド作成",
-      "リサーチ業務",
-      "メール文章作成",
-    ],
-    cta: "まずは相談する",
+    id: "light",
+    icon: "🌱",
+    label: "ライト",
+    hours: "月5時間",
+    price: "10,000",
+    description: "月1回の思考整理＋ちょこっと事務・制作",
     highlighted: false,
   },
   {
-    id: "monthly",
-    label: "月額",
-    name: "月次サポートプラン",
-    price: "20,000",
-    unit: "円 / 月（10時間）",
-    description: "継続的なサポートが必要な方に。月10時間を目安に、スケジュール管理・連絡調整・資料作成などを柔軟に対応します。",
-    features: [
-      "スポットプランの全内容",
-      "スケジュール管理・連絡調整",
-      "データ入力・スプレッドシート管理",
-      "AIツール活用サポート",
-      "月次振り返り面談（30分）",
-    ],
-    cta: "このプランで相談する",
+    id: "standard",
+    icon: "🌿",
+    label: "スタンダード",
+    hours: "月10時間",
+    price: "19,800",
+    description: "定例の思考整理＋事務・Canva制作までおまかせ",
     highlighted: true,
   },
   {
     id: "full",
-    label: "フルサポート",
-    name: "専属サポートプラン",
-    price: "45,000",
-    unit: "円 / 月（25時間）",
-    description: "「右腕」として事業を一緒に走りたい方へ。幅広い業務を継続的にお任せいただけます。",
-    features: [
-      "月次サポートプランの全内容",
-      "優先対応（当日〜翌営業日）",
-      "パソコン操作サポート",
-      "定期ミーティング（週1回・30分）",
-    ],
-    cta: "詳しく相談する",
+    icon: "🌳",
+    label: "しっかり伴走",
+    hours: "月20時間",
+    price: "39,600",
+    description: "週次で並走。考える→決める→形にするを毎週回します",
     highlighted: false,
   },
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-gray-50 px-6">
+    <section id="pricing" className="py-24 bg-white px-6">
       <div className="max-w-2xl mx-auto">
-        {/* セクションタイトル */}
         <p className="text-xs tracking-widest text-slate-400 uppercase mb-2">
           Pricing
         </p>
@@ -62,10 +39,9 @@ export default function Pricing() {
           料金プラン
         </h2>
         <p className="text-slate-500 text-sm leading-relaxed mb-12">
-          すべてのプランは月末締め・翌月払い。まずは無料でご相談ください。
+          すべて税込・月額。時間の使い方はご相談で柔軟に。単発のご依頼もお受けします。
         </p>
 
-        {/* プランカード */}
         <div className="space-y-4">
           {plans.map((plan) => (
             <div
@@ -76,24 +52,27 @@ export default function Pricing() {
                   : "bg-white border-slate-100 hover:border-slate-300"
               }`}
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
-                <div>
-                  <p
-                    className={`text-xs tracking-widest uppercase mb-1 ${
-                      plan.highlighted ? "text-slate-400" : "text-slate-400"
-                    }`}
-                  >
-                    {plan.label}
-                  </p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">{plan.icon}</span>
                   <h3
-                    className={`text-xl font-medium ${
+                    className={`text-lg font-medium ${
                       plan.highlighted ? "text-white" : "text-slate-800"
                     }`}
                   >
-                    {plan.name}
+                    {plan.label}
                   </h3>
+                  <span
+                    className={`text-xs px-2 py-0.5 border ${
+                      plan.highlighted
+                        ? "border-slate-600 text-slate-400"
+                        : "border-slate-200 text-slate-400"
+                    }`}
+                  >
+                    {plan.hours}
+                  </span>
                 </div>
-                <div className="text-right shrink-0">
+                <div className="shrink-0">
                   <span
                     className={`text-2xl font-light ${
                       plan.highlighted ? "text-white" : "text-slate-800"
@@ -106,7 +85,7 @@ export default function Pricing() {
                       plan.highlighted ? "text-slate-400" : "text-slate-400"
                     }`}
                   >
-                    {plan.unit}
+                    / 月
                   </span>
                 </div>
               </div>
@@ -119,22 +98,6 @@ export default function Pricing() {
                 {plan.description}
               </p>
 
-              <ul className="space-y-2 mb-8">
-                {plan.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className={`text-sm flex items-start gap-2 ${
-                      plan.highlighted ? "text-slate-300" : "text-slate-500"
-                    }`}
-                  >
-                    <span className={plan.highlighted ? "text-slate-400" : "text-slate-300"}>
-                      ―
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
               <a
                 href="#contact"
                 className={`inline-block px-6 py-2.5 text-xs tracking-wide transition-colors duration-200 ${
@@ -143,16 +106,11 @@ export default function Pricing() {
                     : "border border-slate-300 text-slate-600 hover:border-slate-500 hover:text-slate-800"
                 }`}
               >
-                {plan.cta}
+                このプランで相談する
               </a>
             </div>
           ))}
         </div>
-
-        {/* 注意書き */}
-        <p className="text-xs text-slate-400 leading-relaxed mt-8">
-          ※ 料金はすべて税込です。業務内容・ボリュームによって別途お見積もりします。お気軽にご相談ください。
-        </p>
       </div>
     </section>
   );
