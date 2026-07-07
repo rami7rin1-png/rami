@@ -30,15 +30,15 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-white px-6">
+    <section id="pricing" className="py-16 sm:py-24 bg-white px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
         <p className="text-xs tracking-widest text-slate-400 uppercase mb-2">
           Pricing
         </p>
-        <h2 className="text-3xl font-light text-slate-800 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-light text-slate-800 mb-4">
           料金プラン
         </h2>
-        <p className="text-slate-500 text-sm leading-relaxed mb-12">
+        <p className="text-slate-500 text-sm leading-relaxed mb-10 sm:mb-12">
           すべて税込・月額。時間の使い方はご相談で柔軟に。単発のご依頼もお受けします。
         </p>
 
@@ -46,17 +46,17 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`p-8 border transition-colors duration-200 ${
+              className={`p-5 sm:p-8 border transition-colors duration-200 ${
                 plan.highlighted
                   ? "bg-slate-800 border-slate-800"
                   : "bg-white border-slate-100 hover:border-slate-300"
               }`}
             >
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                <div className="flex items-center gap-2">
+              <div className="flex items-start justify-between gap-2 mb-3">
+                <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-lg">{plan.icon}</span>
                   <h3
-                    className={`text-lg font-medium ${
+                    className={`text-base sm:text-lg font-medium ${
                       plan.highlighted ? "text-white" : "text-slate-800"
                     }`}
                   >
@@ -72,9 +72,9 @@ export default function Pricing() {
                     {plan.hours}
                   </span>
                 </div>
-                <div className="shrink-0">
+                <div className="shrink-0 text-right">
                   <span
-                    className={`text-2xl font-light ${
+                    className={`text-xl sm:text-2xl font-light ${
                       plan.highlighted ? "text-white" : "text-slate-800"
                     }`}
                   >
@@ -100,7 +100,7 @@ export default function Pricing() {
 
               <a
                 href="#contact"
-                className={`inline-block px-6 py-2.5 text-xs tracking-wide transition-colors duration-200 ${
+                className={`block sm:inline-block text-center px-6 py-3 text-xs tracking-wide transition-colors duration-200 ${
                   plan.highlighted
                     ? "bg-white text-slate-800 hover:bg-slate-100"
                     : "border border-slate-300 text-slate-600 hover:border-slate-500 hover:text-slate-800"

@@ -21,38 +21,34 @@ const steps = [
 
 export default function Flow() {
   return (
-    <section id="flow" className="py-24 bg-white px-6">
+    <section id="flow" className="py-16 sm:py-24 bg-white px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
-        {/* セクションタイトル */}
         <p className="text-xs tracking-widest text-slate-400 uppercase mb-2">
           Flow
         </p>
-        <h2 className="text-3xl font-light text-slate-800 mb-3">
+        <h2 className="text-2xl sm:text-3xl font-light text-slate-800 mb-3">
           サポートの流れ
         </h2>
-        <p className="text-slate-500 text-sm leading-relaxed mb-14">
+        <p className="text-slate-500 text-sm leading-relaxed mb-10 sm:mb-14">
           相談だけで終わらせません。"実行"までが私の仕事です。
         </p>
 
-        {/* ステップ */}
         <div className="space-y-0">
           {steps.map((item, index) => (
-            <div key={item.step} className="flex gap-8">
-              {/* 左: ライン＋番号 */}
+            <div key={item.step} className="flex gap-4 sm:gap-8">
               <div className="flex flex-col items-center">
                 <div className="w-px bg-slate-200 flex-1" style={{ visibility: index === 0 ? "hidden" : "visible" }} />
-                <div className="w-8 h-8 border border-slate-300 flex items-center justify-center shrink-0 my-2">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 border border-slate-300 flex items-center justify-center shrink-0 my-2">
                   <span className="text-xs text-slate-500">{index + 1}</span>
                 </div>
                 <div className="w-px bg-slate-200 flex-1" style={{ visibility: index === steps.length - 1 ? "hidden" : "visible" }} />
               </div>
 
-              {/* 右: コンテンツ */}
-              <div className="pb-10 pt-1">
+              <div className="pb-8 sm:pb-10 pt-1">
                 <p className="text-xs tracking-widest text-slate-400 uppercase mb-1">
                   {item.step}
                 </p>
-                <h3 className="text-xl font-medium text-slate-800 mb-2">
+                <h3 className="text-lg sm:text-xl font-medium text-slate-800 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed">

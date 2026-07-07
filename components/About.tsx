@@ -11,18 +11,16 @@ const skills = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-gray-50 px-6">
+    <section id="about" className="py-16 sm:py-24 bg-gray-50 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
-        {/* セクションタイトル */}
         <p className="text-xs tracking-widest text-slate-400 uppercase mb-2">
           About
         </p>
-        <h2 className="text-3xl font-light text-slate-800 mb-12">
+        <h2 className="text-2xl sm:text-3xl font-light text-slate-800 mb-8 sm:mb-12">
           自己紹介
         </h2>
 
-        {/* 自己紹介文 */}
-        <div className="space-y-4 text-slate-600 leading-relaxed mb-14">
+        <div className="space-y-4 text-slate-600 leading-relaxed mb-10 sm:mb-14 text-sm sm:text-base">
           <p>
             はじめまして。伴歩型オンライン秘書の <strong className="font-medium text-slate-800">荒川 愛</strong> です。
           </p>
@@ -34,16 +32,15 @@ export default function About() {
           </p>
         </div>
 
-        {/* スキル */}
         <div>
-          <h3 className="text-sm tracking-widest text-slate-400 uppercase mb-4">
+          <h3 className="text-xs tracking-widest text-slate-400 uppercase mb-4">
             Skills
           </h3>
           <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm"
+                className="px-3 sm:px-4 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs sm:text-sm"
               >
                 {skill}
               </span>
