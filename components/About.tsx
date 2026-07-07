@@ -24,7 +24,7 @@ export default function About() {
         {/* 自己紹介文 */}
         <div className="space-y-4 text-slate-600 leading-relaxed mb-14">
           <p>
-            はじめまして。伴歩型オンライン秘書の <strong className="font-medium text-slate-800">荒川 愛（らみ）</strong> です。
+            はじめまして。伴歩型オンライン秘書の <strong className="font-medium text-slate-800">荒川 愛</strong> です。
           </p>
           <p>
             金融機関での事務経験（21年）を経て、福祉業界に転職。相談支援・事務業務を14年担当してきました。合計35年の実務経験を活かし、「忙しくて頭が整理できない」という方のタスク・思考・資料の整理をサポートしています。

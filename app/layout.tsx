@@ -10,11 +10,11 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "らみ | 伴歩型オンライン秘書",
+  title: "荒川 愛 | 伴歩型オンライン秘書",
   description:
     "金融・福祉で35年の実務経験を持つ伴歩型オンライン秘書。思考整理・タスク整理・Canva資料作成・スケジュール管理など幅広くサポートします。",
   openGraph: {
-    title: "らみ | 伴歩型オンライン秘書",
+    title: "荒川 愛 | 伴歩型オンライン秘書",
     description:
       "頭の中の「ごちゃごちゃ」を一緒に整理します。あなたのペースに寄り添い、やりたいことを前に進めるお手伝いをします。",
     type: "website",
